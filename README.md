@@ -183,3 +183,30 @@ Depois:
 → conversar com o chatbot
 
 ---
+
+---
+
+#### Melhorias possíveis:
+
+As perguntas abaixo não retornam os resultados adequados. É possível fazer filtros mais avançados com processamento de linguagem mais complexo, seja com uso de hard code com maior variedade de cenários e regras (incluindo uso de filtros "e"/"ou" compostos), embeddings locais (ex.: spaCy), ou mesmo modelos de linguagem (por conta da exigência do processo de rodar a aplicação localmente, não foram usados modelos de linguagem devido à impraticidade de rodar localmente e ao entendimento de que "rodar localmente" exclui o uso de APIs").
+
+```
+    # Quantas vendas foram feitas?
+    # Quantas notas fiscais têm movimentação igual a VENDA?
+    # Quantos clientes são do sexo F?
+    # Quantos veículos da marca FIAT foram vendidos?
+    # Quantas vendas foram feitas pela equipe VENDAS VEICULOS?
+    
+    # Quantas vendas foram feitas na empresa UNITED JOÃO XXIII?
+    # Quantas notas têm tipo de venda VU - VEICULOS/ MAQUINAS USADOS?
+    # Quantas devoluções foram registradas?
+    # Quantas vendas foram feitas por CONSULTOR TECNICO?    
+    # Mostrar os funcionários onde empresa = TRILHA TERESINA.
+    # Listar as notas fiscais onde tipo_venda = VD - VENDA DIRETA.
+    
+    # Mostrar clientes onde marca_veiculo = FIAT.
+    # Listar valores de nota onde movimentação = DEVOLUÇÃO VENDA.
+
+    # Quantas vendas a consultora FRANSCISCA ADRIANA fez?
+    # Quantos veículos da cor branca foram vendidos?
+```
