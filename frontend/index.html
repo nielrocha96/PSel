@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <title>Chat Excel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css"> <!-- Importa o arquivo externo de estilos CSS -->
+</head>
+
+<body>
+  <h2>Chat Excel</h2> <!-- Título principal da página -->
+
+  <!-- Área de upload de arquivo -->
+  <div id="upload-area">
+    <input type="file" id="fileInput" accept=".xlsx" /> <!-- Campo para o usuário selecionar um arquivo Excel (.xlsx) -->
+    <button id="uploadBtn">Enviar</button>              <!-- Botão que envia o arquivo para o backend -->
+  </div>
+
+  <!-- Caixa de chat onde as mensagens aparecem -->
+  <div id="chat-box">
+    <div class="bot msg">Bem-vindo!   
+Para começar:<br><br>
+1) Envie um arquivo Excel (.xlsx)<br>
+2) Aguarde o processamento<br>
+3) Faça perguntas como:<br>
+- "Qual a soma de valor_total onde empresa = X?"<br>
+- "Mostrar os clientes onde o sexo = M."<br>
+- "Liste todos os clientes."<br>
+- "Listar todos os veículos vendidos onde marca_veiculo = JEEP."<br>
+- "Média dos valores onde movimentacao = VENDA."<br><br>
+
+Vou interpretar sua pergunta e analisar a planilha automaticamente.</div> <!-- Mensagem inicial do "bot" -->
+  </div>
+
+  <!-- Área para o usuário digitar e enviar perguntas -->
+  <div id="ask-area">
+    <input id="question" type="text" placeholder="Digite sua pergunta..." /> <!-- Campo de texto para digitar perguntas -->
+    <button id="askBtn">Perguntar</button>                                   <!-- Botão que envia a pergunta -->
+  </div>
+
+  <!-- Importa o arquivo JavaScript responsável pela lógica da interface -->
+  <script src="app.js"></script>
+</body>
+</html>
